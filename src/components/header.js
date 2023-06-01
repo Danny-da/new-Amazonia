@@ -1,43 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './estilo.css';
-import TextField from '@mui/material/TextField';
-import myImage from './logo.png';
-import myImaage from './splash.png';
 
-function Header({ onSearchSubmit }) {
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const handleSearchChange = (event) => {
-    const { value } = event.target;
-    setSearchTerm(value);
-  };
-
-  const handleSearchSubmit = (event) => {
-    if (event.key === 'Enter') {
-      onSearchSubmit(searchTerm);
-    }
-  };
-
+const Header = () => {
   return (
-    <header className="header">
+    <header>
+      <h1>¡Bienvenido a NewAmazonia!</h1>
       <nav>
-        <ul className="header-content">
-          <div className="logo-container">
-            <img src={myImage} width={70} height={70} alt="Logo de Amazonía" style={{ marginLeft: '-30px' }}/>
-            <img src={myImaage} width={200} height={70} alt="Logo de Amazonía" />
-          </div>
-          <TextField
-            label="Buscar"
-            variant="outlined"
-            value={searchTerm}
-            onChange={handleSearchChange}
-            onKeyPress={handleSearchSubmit}
-            style={{ backgroundColor: '#FFFFFF', marginRight: '50px' }}
-          />
-        </ul>
+        {/* Agrega tus elementos de navegación aquí */}
       </nav>
     </header>
   );
-}
+};
 
 export default Header;

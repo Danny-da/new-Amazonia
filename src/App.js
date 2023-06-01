@@ -1,10 +1,10 @@
 import React from 'react';
-import AppRouter from './AppRouter';
+import AppRoutes from './AppRouter';
 
 function App() {
   return (
     <div>
-      <AppRouter />
+      <AppRoutes />
     </div>
   );
 }
