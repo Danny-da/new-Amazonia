@@ -18,7 +18,7 @@ const Menu = () => {
           label={
             <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
               <StarOutlineIcon sx={{color: 'white' ,marginRight: 1 }} />
-              <Typography sx={{ color:'white',flexGrow: 1, textAlign: 'center' }} variant="body1">Aves</Typography>
+              <Typography sx={{ color:'white', }} variant="body1">Aves</Typography>
             </Box>
           }
           sx={{ width: '12.5%' }}
