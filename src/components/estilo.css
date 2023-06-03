@@ -47,7 +47,7 @@ header {
 .card {
   width: 552px;
   height: 223px;
-  margin-left: 10%;
+  margin-left: calc(10% - 30px);
   margin-top: 20px;
   
 }
