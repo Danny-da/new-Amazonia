@@ -1,6 +1,7 @@
 import React from 'react';
 import './estilo.css';
 import { Card, CardContent, Grid, CardMedia, Typography, Fab, Box } from '@mui/material';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import img1 from '../images/card.png'
 import img2 from '../images/card2.png'
 import img3 from '../images/card 3.png'
@@ -84,10 +85,12 @@ const Body = () => {
 
       <img src={map} alt="Logo de Amazonía" style={{ width: '68%', marginLeft: "45%", marginTop: '-100%' }} />
       <Box mt={2} style={{ textAlign: 'center' }}>
-        <Fab variant="extended" color="primary">
-          Ver más
+        <Fab variant="extended" color="primary" aria-label="show more" >
+          Ver más 
+          <ChevronRightIcon fontSize= "medium" style={{marginLeft: '5px' }} />
         </Fab>
       </Box>
+      <div/>
     </div>
   );
 };
