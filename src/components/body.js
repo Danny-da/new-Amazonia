@@ -1,6 +1,6 @@
 import React from 'react';
 import './estilo.css';
-import { Card, CardContent, Grid, CardMedia, Typography, Fab, Box } from '@mui/material';
+import { Card, CardContent, Grid, CardMedia, Typography, Fab, Box, CardActionArea } from '@mui/material';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import img1 from '../images/card.png'
 import img2 from '../images/card2.png'
@@ -37,7 +37,7 @@ const Body = () => {
         </Grid>
       </Card>
 
-      <Card className="card" style={{boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.1)' }}>
+      <Card className="card" style={{ boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.1)' }}>
         <Grid container>
           <Grid item xs={12} sm={4}>
             <img src={img2} alt="Imagen 2" />
@@ -85,15 +85,40 @@ const Body = () => {
 
       <img src={map} alt="Logo de Amazonía" style={{ width: '68%', marginLeft: "45%", marginTop: '-100%' }} />
       <Box mt={2} style={{ textAlign: 'center' }}>
-        <Fab variant="extended" color="primary" aria-label="show more" >
-          Ver más 
-          <ChevronRightIcon fontSize= "medium" style={{marginLeft: '5px' }} />
+        <Fab variant="extended" color="primary" aria-label="show more">
+          Ver más
+          <ChevronRightIcon fontSize="medium" style={{ marginLeft: '5px' }} />
         </Fab>
       </Box>
-      <div/>
+
+      <div style={{ padding: '50px' }}>
+        <h2 style={{ textAlign: 'center' }}>Especies</h2>
+        <h1 style={{ textAlign: 'center' }}>Explora la asombrosa variedad de flora y fauna en la región amazónica</h1>
+        <br />
+        {/* Contenido del segundo div */}
+      </div>
+
+      <Card sx={{ maxWidth: 345 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="140"
+          image="/static/images/cards/contemplative-reptile.jpg"
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            Lizard
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Lizards are a widespread group of squamate reptiles, with over 6,000
+            species, ranging across all continents except Antarctica
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
     </div>
   );
 };
 
 export default Body;
-
