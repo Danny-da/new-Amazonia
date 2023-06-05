@@ -47,11 +47,21 @@ header {
 .card {
   width: 552px;
   height: 223px;
-  margin-left: calc(10% - 30px);
+  margin-left: calc(7% - 30px);
   margin-top: 20px;
   
 }
 
 .button-container {
   margin-left: 65%;
+}
+
+.ca-rd {
+  width: 552px;
+  height: 210px;
+  margin-left: calc(54% - 30px);
+  margin-top: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  
 }
