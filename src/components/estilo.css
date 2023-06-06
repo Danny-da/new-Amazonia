@@ -61,7 +61,13 @@ header {
   height: 210px;
   margin-left: calc(54% - 30px);
   margin-top: 20px;
-  border: 1px solid #000;
-  border-radius: 10px;
+  /* border: 1px solid #000;
+  border-radius: 10px; */
   
+}
+
+img#amazo-image {
+  width: 40%;
+  margin-left: 10%;
+  margin-top: -1000%;
 }
