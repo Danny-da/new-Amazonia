@@ -6,7 +6,10 @@ import { Search, Person } from '@mui/icons-material';
 
 const Header = () => {
   return (
+
+
     <header className="header">
+
       <nav>
         <ul className="header-content">
           <div className="logo-container">
