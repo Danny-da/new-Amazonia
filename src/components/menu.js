@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tab, Tabs, Box, Typography } from '@mui/material';
-import StarOutlineIcon from '@mui/icons-material/StarOutline';
+import image1 from '../images/heder.png'
 
 const Menu = () => {
   const [value, setValue] = React.useState(0);
@@ -9,84 +9,97 @@ const Menu = () => {
     setValue(newValue);
   };
 
+  const typographyStyles = {
+    color: 'white',
+    fontSize: '1rem',
+    '@media (max-width: 1000px)': {
+      fontSize: '0.7rem',
+    },
+    '@media (max-width: 700px)': {
+      fontSize: '0.5rem',
+    },
+
+  };
+  const containerStyles = {
+    backgroundImage: `url(${image1})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    
+  };
+
   return (
-    <Box sx={{ position: 'fixed',top: 0,left: 0,zIndex: 999,
-    width: '100%',textAlign:'auto',marginTop:'70px' ,flexGrow: 1, display: 'flex',backdropFilter: 'blur(2px)',
-     }}>
-      <Tabs value={value} onChange={handleChange} aria-label="Menu de pestañas" sx={{ width: '100%' }}>
+    <Box className="menu-container" >
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        aria-label="Menu de pestañas"
+        className="menu-tabs"
+      >
         <Tab
           label={
-            <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-              <StarOutlineIcon sx={{color: 'white' ,marginRight: 1 }} />
-              <Typography sx={{ color:'white', }} variant="body1">Aves</Typography>
+            <Box className="menu-tab">
+              <Typography sx={typographyStyles}>Aves</Typography>
             </Box>
           }
-          sx={{ width: '12.5%' }}
+          className="menu-tab-item"
         />
         <Tab
           label={
-            <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-              <StarOutlineIcon sx={{color: 'white', marginRight: 1 }} />
-              <Typography sx={{ color:'white'}} variant="body1">Mamiferos</Typography>
+            <Box className="menu-tab">
+              <Typography sx={typographyStyles}>Mamíferos</Typography>
             </Box>
           }
-          sx={{ width: '12.5%' }}
+          className="menu-tab-item"
+        />
+        <Tab
+          label={
+            <Box className="menu-tab">
+              <Typography sx={typographyStyles}>Reptiles</Typography>
+            </Box>
+          }
+          className="menu-tab-item"
+        />
+        <Tab
+          label={
+            <Box className="menu-tab">
+              <Typography sx={typographyStyles}>Anfibios</Typography>
+            </Box>
+          }
+          className="menu-tab-item"
+        />
+        <Tab
+          label={
+            <Box className="menu-tab">
+              <Typography sx={typographyStyles}>Peces</Typography>
+            </Box>
+          }
+          className="menu-tab-item"
+        />
+        <Tab
+          label={
+            <Box className="menu-tab">
+              <Typography sx={typographyStyles}>Insectos</Typography>
+            </Box>
+          }
+          className="menu-tab-item"
+        />
+        <Tab
+          label={
+            <Box className="menu-tab">
+              <Typography sx={typographyStyles}>Árboles</Typography>
+            </Box>
+          }
+          className="menu-tab-item"
+        />
+        <Tab
+          label={
+            <Box className="menu-tab">
+              <Typography sx={typographyStyles}>Palmeras</Typography>
+            </Box>
+          }
+          className="menu-tab-item"
         />
         {/* Resto de las pestañas */}
-        <Tab
-          label={
-            <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-              <StarOutlineIcon sx={{color: 'white', marginRight: 1 }} />
-              <Typography sx={{ color:'white'}} variant="body1">Arboles</Typography>
-            </Box>
-          }
-          sx={{ width: '12.5%' }}
-        />
-        <Tab
-          label={
-            <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-              <StarOutlineIcon sx={{color: 'white', marginRight: 1 }} />
-              <Typography sx={{ color:'white'}} variant="body1">Palmeras</Typography>
-            </Box>
-          }
-          sx={{ width: '12.5%' }}
-        />
-        <Tab
-          label={
-            <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-              <StarOutlineIcon sx={{color: 'white', marginRight: 1 }} />
-              <Typography sx={{ color:'white'}} variant="body1">Peces</Typography>
-            </Box>
-          }
-          sx={{ width: '12.5%' }}
-        />
-        <Tab
-          label={
-            <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-              <StarOutlineIcon sx={{color: 'white', marginRight: 1 }} />
-              <Typography sx={{ color:'white'}} variant="body1">Insectos</Typography>
-            </Box>
-          }
-          sx={{ width: '12.5%' }}
-        />
-        <Tab
-          label={
-            <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-              <StarOutlineIcon sx={{color: 'white', marginRight: 1 }} />
-              <Typography sx={{ color:'white'}} variant="body1">Reptiles</Typography>
-            </Box>
-          }
-          sx={{ width: '12.5%' }}
-        />
-        <Tab
-          label={
-            <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-              <StarOutlineIcon sx={{color: 'white', marginRight: 1 }} />
-              <Typography sx={{ color:'white'}} variant="body1">Anfibios</Typography>
-            </Box>
-          }
-          sx={{ width: '12.5%' }}
-        />
       </Tabs>
     </Box>
   );

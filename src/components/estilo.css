@@ -1,36 +1,70 @@
+/* Estilos del header */
 header {
-    background-color:rgb(83, 104, 40);
-    padding: 30px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 10px;
-    z-index: 9999;
-  }
+  background-color: rgb(83, 104, 40);
+  padding: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  z-index: 9999;
+}
 
-  .logo-container {
-    display: flex;
-    align-items: center;
-    margin-top: -25px;
-    margin-left: 80px;
-  }
-  
-  .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 1px;
-    padding: 1px;
-  }
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-top: -25px;
+  margin-left: -10px;
+}
 
-  .menu-container {
-    background-color: #3b5998;
-    position: relative;
-    overflow: hidden;
-  }
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 1px;
+  padding: 1px;
+}
 
-  .image-overlay {
+/* Estilos del menú */
+.menu-container {
+  position: relative;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  text-align: auto;
+  margin-top: 70px;
+  display: flex;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-tabs {
+  width: 100%;
+  margin: auto;
+}
+
+.menu-tab {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-label {
+  color: white;
+  font-size: 1rem;
+}
+
+.menu-tab-item {
+  width: 12.5%;
+}
+
+/* Estilos de Home */
+.home-container {
+  margin-top: 10px;
   position: relative;
 }
 
@@ -41,5 +75,99 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Cambia el valor de opacidad (0.5) según tus preferencias */
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.image-overlay {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+
+.carousel-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-container {
+  position: absolute;
+  top: 55%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: white;
+}
+
+.title {
+  font-size: 3.5vw;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 2vw;
+  font-family: Goudy Old Style;
+}
+
+@media (max-width: 1000px) {
+  .image-overlay {
+    height: 70vh;
+  }
+}
+
+/* Estilos del body2-container */
+.body2-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh; 
+}
+
+/* Estilos de la imagen de paralaje */
+#parallax-image {
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+}
+
+/* Estilos de Footer */
+.footer-container {
+  background-color: black;
+  height: 200px;
+  margin-top: 5%;
+}
+
+.footer-bar {
+  background-color: rgb(83, 104, 40);
+  height: 10px;
+}
+
+.footer-image {
+  margin-top: 2%;
+  margin-left: 3%;
+}
+
+.footer-text {
+  margin-top: 5px;
+  color: white;
+  font-weight: normal;
+  font-size: 1vw;
+  margin-left: 3%;
+  line-height: 2;
+}
+
+.footer-email {
+  color: white;
 }
