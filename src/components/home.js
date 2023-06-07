@@ -5,6 +5,7 @@ import myImage1 from '../images/img1.png';
 import myImage2 from '../images/img2.png';
 import myImage3 from '../images/img3.png';
 import myImage4 from '../images/img4.png';
+import './estilo.css'; // Importar el archivo de estilos
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -20,35 +21,38 @@ const Home = () => {
   }, []);
 
   return (
-    <div style={{ marginTop: '10px', position: 'relative' }}>
+    <div className="home-container">
       <Carousel showThumbs={false} selectedItem={activeIndex}>
-        <div>
         <div className="image-overlay">
-          <img src={myImage1} alt="1" style={{ maxHeight: '740px', maxWidth: '100%' }} />
+          <div className="carousel-image-container">
+            <img src={myImage1} alt="1" className="carousel-image" />
+          </div>
         </div>
-        </div>
-        <div>
         <div className="image-overlay">
-          <img src={myImage2} alt="2" style={{ maxHeight: '740px', maxWidth: '100%' }} />
+          <div className="carousel-image-container">
+            <img src={myImage2} alt="2" className="carousel-image" />
+          </div>
         </div>
-        </div>
-        <div>
         <div className="image-overlay">
-          <img src={myImage3} alt="3" style={{ maxHeight: '740px', maxWidth: '100%' }} />
+          <div className="carousel-image-container">
+            <img src={myImage3} alt="3" className="carousel-image" />
+          </div>
         </div>
-        </div>
-        <div>
         <div className="image-overlay">
-          <img src={myImage4} alt="4" style={{ maxHeight: '740px', maxWidth: '100%' }} />
-        </div>
+          <div className="carousel-image-container">
+            <img src={myImage4} alt="4" className="carousel-image" />
+          </div>
         </div>
       </Carousel>
-      <div style={{ marginTop:'15%',position: 'absolute', top: 0, left:'13%',  width: '100%', textAlign: 'left', color:'white' }}>
-        {/* <h1 style={{ fontSize: '50px' }}>Explora la diversidad oculta<br/>
-        de los pueblos indígena y<br/> la vida silvestre</h1>
-        <p>Explora la increíble biodiversidad de Loreto en la Amazonia a través de nuestra guías<br/> 
-        ilustradas de especies animales. Descarga nuestra aplicación móvil.y lleva contigo este<br/> 
-        increíble mundo de conocimiento en tus aventuras por la selva amazónica</p> */}
+      <div className="content-container">
+        <h1 className="title">
+          Explora la diversidad oculta de los pueblos indígenas y la vida silvestre
+        </h1>
+        <p className="description">
+          Explora la increíble biodiversidad de Loreto en la Amazonia a través de nuestras guías ilustradas de especies
+          animales. Descarga nuestra aplicación móvil y lleva contigo este increíble mundo de conocimiento en tus
+          aventuras por la selva amazónica.
+        </p>
       </div>
     </div>
   );

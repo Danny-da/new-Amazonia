@@ -20,7 +20,7 @@ const Body = () => {
         <h1 style={{ marginLeft: '10%', marginTop: '-15%' }}>AMAZONíA: Acerca de <br/>
           Ia guía ilustrada</h1>
         <h1 style={{ marginLeft: '10%' }}>Descubriendo las raíces indígenas</h1>
-          <Card className="ca-rad" style={{ boxShadow: '-5px 5px 5px 1px  rgba(0, 0, 0, 0.1)',   }}>
+          <Card className="ca-rad" style={{filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.1))' }}>
             <CardContent style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
               <Typography variant="h5" component="div" style={{ display: 'flex', alignItems: 'center' }}>
                 <Box mt={2} style={{ marginLeft: '1%' }}>
@@ -42,7 +42,7 @@ const Body = () => {
       <h1 style={{ }}>Descubriendo las raíces indígenas</h1>
       </div> */}
 
-          <Card className="ca-rd" style={{ boxShadow: '-5px 5px 5px 1px rgba(0, 0, 0, 0.1)',maginTop:'100px' }}>
+          <Card className="ca-rd" style={{maginTop:'100px', filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.1))'  }}>
             <CardContent style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
               <Typography variant="h5" component="div" style={{ display: 'flex', alignItems: 'center' }}>
                 <Box mt={2} style={{ marginLeft: '1%' }}>
