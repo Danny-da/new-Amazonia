@@ -5,7 +5,10 @@ import myImaage from '../images/splash.png';
 
 const Header = () => {
   return (
+
+
     <header className="header">
+
       <nav>
         <ul className="header-content">
           <div className="logo-container">
