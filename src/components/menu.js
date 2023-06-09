@@ -1,16 +1,38 @@
-import React from 'react';
-import { Tab, Tabs, Box, Typography } from '@mui/material';
-import image1 from '../images/heder.png'
+import React, { useState } from 'react';
+import { Tab, Tabs, Box, Typography, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import image1 from '../images/heder.png';
 
 const Menu = () => {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 750);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
+  const handleDrawerToggle = () => {
+    setDrawerOpen(!drawerOpen);
+  };
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 750);
+  };
+
+  // Agregar listener para detectar cambios en el tamaño de la ventana
+  React.useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    // Limpiar el listener al desmontar el componente
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const typographyStyles = {
     color: 'white',
+    
     fontSize: '1rem',
     '@media (max-width: 1000px)': {
       fontSize: '0.7rem',
@@ -18,89 +40,70 @@ const Menu = () => {
     '@media (max-width: 700px)': {
       fontSize: '0.5rem',
     },
-
   };
+
   const containerStyles = {
     backgroundImage: `url(${image1})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    
   };
 
+  const menuItems = [
+    'Aves',
+    'Mamíferos',
+    'Reptiles',
+    'Anfibios',
+    'Peces',
+    'Insectos',
+    'Árboles',
+    'Palmeras',
+  ];
+
   return (
-    <Box className="menu-container" >
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        aria-label="Menu de pestañas"
-        className="menu-tabs"
-      >
-        <Tab
-          label={
-            <Box className="menu-tab">
-              <Typography sx={typographyStyles}>Aves</Typography>
-            </Box>
-          }
-          className="menu-tab-item"
-        />
-        <Tab
-          label={
-            <Box className="menu-tab">
-              <Typography sx={typographyStyles}>Mamíferos</Typography>
-            </Box>
-          }
-          className="menu-tab-item"
-        />
-        <Tab
-          label={
-            <Box className="menu-tab">
-              <Typography sx={typographyStyles}>Reptiles</Typography>
-            </Box>
-          }
-          className="menu-tab-item"
-        />
-        <Tab
-          label={
-            <Box className="menu-tab">
-              <Typography sx={typographyStyles}>Anfibios</Typography>
-            </Box>
-          }
-          className="menu-tab-item"
-        />
-        <Tab
-          label={
-            <Box className="menu-tab">
-              <Typography sx={typographyStyles}>Peces</Typography>
-            </Box>
-          }
-          className="menu-tab-item"
-        />
-        <Tab
-          label={
-            <Box className="menu-tab">
-              <Typography sx={typographyStyles}>Insectos</Typography>
-            </Box>
-          }
-          className="menu-tab-item"
-        />
-        <Tab
-          label={
-            <Box className="menu-tab">
-              <Typography sx={typographyStyles}>Árboles</Typography>
-            </Box>
-          }
-          className="menu-tab-item"
-        />
-        <Tab
-          label={
-            <Box className="menu-tab">
-              <Typography sx={typographyStyles}>Palmeras</Typography>
-            </Box>
-          }
-          className="menu-tab-item"
-        />
-        {/* Resto de las pestañas */}
-      </Tabs>
+    <Box className="menu-container">
+      {isMobile ? (
+        <IconButton
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          onClick={handleDrawerToggle}
+          style={{ marginLeft: '5px', color: 'white' }}
+        >
+          <MenuIcon />
+        </IconButton>
+      ) : (
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="Menu de pestañas"
+          className="menu-tabs"
+        >
+          {menuItems.map((item, index) => (
+            <Tab
+              key={index}
+              label={
+                <Box className="menu-tab">
+                  <Typography sx={typographyStyles}>{item}</Typography>
+                </Box>
+              }
+              className="menu-tab-item"
+            />
+          ))}
+        </Tabs>
+      )}
+
+      {/* Menú lateral para pantallas móviles */}
+      <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerToggle}>
+        <Box  sx={{ width: 200, paddingTop: '70px', height: '100%', display: 'flex', flexDirection: 'column', backgroundColor: '#e9f6f6' }}>
+          <List sx={{ flex: '1 1 auto', marginTop: '10px' , spacing:10 }}>
+            {menuItems.map((item, index) => (
+              <ListItem  button key={index} sx={{ marginBottom: '17%', textAlign: 'center' }}>
+                <ListItemText primary={item} sx={{ color: 'black' }} />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Drawer>
     </Box>
   );
 };

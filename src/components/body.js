@@ -14,7 +14,7 @@ import amazo from '../images/amazo.png'
 
 const Body = () => {
   return (
-    <div>
+    <div className='container'>
       <div>
         <div style={{ marginTop: '5%' }}>
         <h1 style={{ marginLeft: '10%', marginTop: '-15%' }}>AMAZONíA: Acerca de <br/>
