@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { Button, Checkbox, FormControlLabel, TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 import myImage2 from '../images/telefono.png';
 import myImage3 from '../images/play.png';
 import myImage4 from '../images/appstore.png';
 import myImage5 from '../images/libro.png';
-import myImage6 from '../images/amazonas.jpg';
+// import myImage6 from '../images/amazonas.jpg';
 import Grid from '@material-ui/core/Grid';
 
 
@@ -32,9 +32,9 @@ const Body2 = () => {
 
   return (
     <div>
-      <div>
+      {/* <div>
         <img src={myImage6}/>
-      </div>
+      </div> */}
       <div style={{ marginTop: '5%', display: 'flex', alignItems: 'flex-start' }}>
         <div style={{ flex: 1 }}>
           <h1 style={{ marginLeft: '13%', fontSize: 'calc(2.5vw + 2vh)', maxWidth: '75%' }}>
