@@ -66,6 +66,8 @@ header {
 .home-container {
   margin-top: 10px;
   position: relative;
+  margin-bottom: 50px;
+
 }
 
 .image-overlay:before {
@@ -85,8 +87,6 @@ header {
   justify-content: center;
   height: 100vh;
 }
-
-
 
 .carousel-image-container {
   width: 100%;
@@ -123,18 +123,16 @@ header {
 
 @media (max-width: 1000px) {
   .image-overlay {
-    height: 70vh;
+    height: 80vh;
   }
 }
-
-/* Estilos del body2-container */
-.body2-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100vh; 
+.text-container {
+  max-width: 500px; /* Establece el límite máximo de ancho en 300px */
+  overflow-wrap: break-word; /* Permite que el texto se ajuste automáticamente y se divida en palabras */
 }
+
+
+
 
 /* Estilos de la imagen de paralaje */
 #parallax-image {

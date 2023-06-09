@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
-import { Button, Checkbox, FormControlLabel, TextField } from '@mui/material';
+import { Divider, Button, Checkbox, FormControlLabel, TextField, Box } from '@mui/material';
 import myImage2 from '../images/telefono.png';
 import myImage3 from '../images/play.png';
 import myImage4 from '../images/appstore.png';
 import myImage5 from '../images/libro.png';
 import myImage6 from '../images/amazonas.jpg';
 import Grid from '@material-ui/core/Grid';
-
 
 const Body2 = () => {
   useEffect(() => {
@@ -19,7 +18,7 @@ const Body2 = () => {
       const scrolled = (scrollTop - startingPoint) * -1;
 
       if (scrolled < maxScroll) {
-        parallaxImage.style.transform = `translateY(${scrolled * 0}px)`;
+        parallaxImage.style.transform = `translateY(${scrolled * 0.1}px)`;
       }
     };
 
@@ -32,72 +31,69 @@ const Body2 = () => {
 
   return (
     <div>
-      <div>
-        <img src={myImage6}/>
-      </div>
-      <div style={{ marginTop: '5%', display: 'flex', alignItems: 'flex-start' }}>
-        <div style={{ flex: 1 }}>
-          <h1 style={{ marginLeft: '13%', fontSize: 'calc(2.5vw + 2vh)', maxWidth: '75%' }}>
-            Tu <span style={{ color: '#ed6c02' }}>guía móvil</span> de<br /> especies y<br /> pueblos indígenas
-          </h1>
-          
-          <h4 style={{ marginLeft: '13%', fontWeight: 'normal', maxWidth: '90%' }}>
-            "Amazonia App: Explora, Conecta y Ahorra: Descubre todo el<br />
-            contenido desde cualquier lugar con tu smartphone Android y<br />
-            consume menos datos".
-          </h4>
-
-          <div style={{ display: 'flex', justifyContent: 'flex-start', marginTop: '2%', marginLeft:'10%' }}>
-            <div style={{ marginRight: '5%' }}>
-              <img src={myImage3} alt="Play Store" style={{ maxWidth: '100%', height: 'auto' }} />
+      {/* Seccion 1 */}
+      <Grid container>
+        <Grid container spacing={0} alignItems="center" justifyContent="center" item xs={12} md={6}>
+          <div style={{ flexDirection: 'column' }}>
+            <h1 style={{ fontSize: 'calc(2.5vw + 2vh)', maxWidth: '100%', textAlign: 'center' }}>
+              Tu <span style={{ color: '#ed6c02' }}>guía móvil</span> de<br /> especies y<br /> pueblos indígenas
+            </h1>
+            <h4 style={{ fontWeight: 'normal', maxWidth: '100%', textAlign: 'center' }}>
+              "Amazonia App: Explora, Conecta y Ahorra: Descubre todo el<br />
+              contenido desde cualquier lugar con tu smartphone Android y<br />
+              consume menos datos".
+            </h4>
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'flex-start', marginTop: '2%', marginLeft: '10%' }}>
+            <div>
+              <img src={myImage3} alt="Play Store" style={{ width: '80%', maxWidth: '100%', height: 'auto' }} />
             </div>
             <div>
-              <img src={myImage4} alt="App Store" style={{ maxWidth: '100%', height: 'auto' }} />
+              <img src={myImage4} alt="App Store" style={{ width: '80%', maxWidth: '100%', height: 'auto' }} />
             </div>
           </div>
-        </div>
+        </Grid>
 
-        <div style={{ marginRight: '5%', marginTop: '2%', width: '25%' }}>
-          <img id="parallax-image" src={myImage2} alt="Teléfono" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', maxWidth: '100%', height: 'auto' }} />
-        </div>
-      </div>
-
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '5%', margin: '0 auto' }}>
-  <img src={myImage5} alt="Imagen 1" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', width: '30%', height: 'auto', marginRight: '50px'}} />
-  
-  <form style={{ width: '50%', maxWidth: '600px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-    <h5 style={{ fontWeight: 'normal' }}>FORMULARIO DE CONTACTO</h5>
-    <h1>Ponte en contacto con<br />nosotros</h1>
-    <Grid container spacing={2}>
-      <Grid item xs={6}>
-        <TextField id="standard-basic" label="Nombres" variant="standard" />
+        <Grid container spacing={0} alignItems="center" justifyContent="center" item xs={12} md={6} style={{ marginTop: '30px' }}>
+          <img id="parallax-image" src={myImage2} alt="Teléfono" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', width: '50%', height: 'auto', maxWidth: '100%' }} />
+        </Grid>
       </Grid>
-      <Grid item xs={6}>
-        <TextField id="standard-basic" label="Correo" variant="standard" />
+
+      {/* Separador */}
+      <Box sx={{ display: 'flex', justifyContent: 'center', margin: '20px 0', marginBottom: '50px' }}>
+        <Divider sx={{ width: '100px', borderWidth: '3px', backgroundColor: '#8b0000', borderRadius: '4px' }} />
+      </Box>
+
+      {/* Seccion 2 */}
+      <Grid container>
+        <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" sx={{ minHeight: '100vh' }} item xs={12} md={6}>
+          <img src={myImage5} alt="Imagen 1" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', width: '60%', height: 'auto' }} />
+        </Grid>
+        <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" item xs={12} md={6} style={{ marginTop: '50px' }}>
+          <Box component="form" sx={{ '& .MuiTextField-root': { m: 1, width: '25ch', height: '50px' }, textAlign: 'center' }} noValidate autoComplete="off">
+            <h5 style={{ fontWeight: 'normal', textAlign: 'center' }}>FORMULARIO DE CONTACTO</h5>
+            <h1 style={{ textAlign: 'center' }}>Ponte en contacto con<br />nosotros</h1>
+            <div>
+              <TextField id="standard-basic" label="Nombres" variant="standard" />
+              <TextField id="standard-basic1" label="Apellidos" variant="standard" />
+            </div>
+            <div>
+              <TextField id="standard-basic" label="Asunto" variant="standard" />
+              <TextField id="standard-basic1" label="Correo" variant="standard" />
+            </div>
+            <div>
+              <TextField id="standard-basic" label="Celular" variant="standard" />
+            </div>
+            <div>
+              <Button variant="contained" color="primary">
+                Enviar
+              </Button>
+            </div>
+          </Box>
+        </Grid>
       </Grid>
-      <Grid item xs={6}>
-        <TextField id="standard-basic" label="Asunto" variant="standard" />
-      </Grid>
-      <Grid item xs={6}>
-        <TextField id="standard-basic" label="Apellidos" variant="standard" />
-      </Grid>
-      <Grid item xs={10}>
-        <TextField id="standard-basic" label="Celular" variant="standard" fullWidth />
-      </Grid>
-    </Grid>
-    <Button style={{ backgroundColor: '#0086b7' }} variant="contained" color="primary">
-      Enviar
-    </Button>
-  </form>
-</div>
-
-
-
-
-
-
     </div>
   );
-}
+};
 
 export default Body2;
