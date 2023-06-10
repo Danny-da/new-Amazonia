@@ -55,7 +55,7 @@ const Body2 = () => {
         </Grid>
 
         <Grid container spacing={0} alignItems="center" justifyContent="center" item xs={12} md={6} style={{ marginTop: '30px' }}>
-          <img id="parallax-image" src={myImage2} alt="Teléfono" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', width: '50%', height: 'auto', maxWidth: '100%' }} />
+          <img id="parallax-image" src={myImage2} alt="Teléfono" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', width: '50%',  height: 'auto', maxWidth: '100%' }} />
         </Grid>
       </Grid>
 
@@ -67,10 +67,10 @@ const Body2 = () => {
       {/* Seccion 2 */}
       <Grid container>
         <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" sx={{ minHeight: '100vh' }} item xs={12} md={6}>
-          <img src={myImage5} alt="Imagen 1" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', width: '60%', height: 'auto' }} />
+          <img src={myImage5} alt="Imagen 1" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', width: '65%', height: 'auto' }} />
         </Grid>
         <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" item xs={12} md={6} style={{ marginTop: '50px' }}>
-          <Box component="form" sx={{ '& .MuiTextField-root': { m: 1, width: '25ch', height: '50px' }, textAlign: 'center' }} noValidate autoComplete="off">
+          <Box component="form" sx={{ '& .MuiTextField-root': { m: 1}, textAlign: 'center' }} noValidate autoComplete="off">
             <h5 style={{ fontWeight: 'normal', textAlign: 'center' }}>FORMULARIO DE CONTACTO</h5>
             <h1 style={{ textAlign: 'center' }}>Ponte en contacto con<br />nosotros</h1>
             <div>
