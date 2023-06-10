@@ -170,12 +170,33 @@ header {
   color: white;
 } 
 
+
 .card {
   width: 552px;
-  height: 223px;
+  height: 210px;
   margin-left: calc(7% - 30px);
   margin-top: 20px;
   
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%; /* Cambiar el ancho a 100% en dispositivos con un ancho máximo de 600px */
+    margin-left: 0; /* Eliminar el margen izquierdo en dispositivos más pequeños */
+    margin-top: 10px; /* Ajustar el margen superior en dispositivos más pequeños */
+    /* Otros estilos necesarios para adaptar el card en dispositivos móviles */
+  }
+}
+
+@media (max-width: 960px) {
+  .card {
+    width: 80%; /* Reducir el ancho del card al 80% del contenedor en dispositivos más pequeños */
+    height: auto; /* Permitir que la altura se ajuste automáticamente según el contenido */
+    margin-left: auto; /* Centrar horizontalmente el card en dispositivos más pequeños */
+    margin-right: auto;
+    margin-top: 10px; /* Ajustar el margen superior en dispositivos más pequeños */
+    /* Otros estilos necesarios para adaptar el card en dispositivos con un ancho máximo de 960px */
+  }
 }
 
 .button-container {
@@ -185,20 +206,12 @@ header {
 .ca-rd {
   width: 552px;
   height: 210px;
-  margin-left: calc(54% - 30px);
+  margin-left: calc(10% - 30px);
   margin-top: 10px;
   /* border: 1px solid #000;
   border-radius: 10px; */
 }
-.ca-rad {
-  width: 552px;
-  height: 210px;
-  margin-left: calc(54% - 30px);
-  margin-top: 30px;
-  /* border: 1px solid #000;
-  border-radius: 10px; */
-  
-}
+
 @media (max-width: 600px) {
   .ca-rd {
     width: 100%; /* Cambiar el ancho a 100% en dispositivos con un ancho máximo de 600px */
@@ -220,7 +233,7 @@ header {
 }
 
 img#amazo-image {
-  width: 40%;
-  margin-left: 10%;
-  margin-top: -1000%;
+  width: 100%;
+  margin-left: 1%;
+  margin-top: 7%;
 }

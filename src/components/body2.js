@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { Divider, Button, Checkbox, FormControlLabel, TextField, Box } from '@mui/material';
+import { Divider, Button, TextField, Box } from '@mui/material';
 import myImage2 from '../images/telefono.png';
 import myImage3 from '../images/play.png';
 import myImage4 from '../images/appstore.png';
 import myImage5 from '../images/libro.png';
-import myImage6 from '../images/amazonas.jpg';
+// import myImage6 from '../images/amazonas.jpg';
 import Grid from '@material-ui/core/Grid';
 
 const Body2 = () => {
