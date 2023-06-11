@@ -10,7 +10,7 @@ import Grid from '@material-ui/core/Grid';
 const Body2 = () => {
   useEffect(() => {
     const parallaxImage = document.getElementById('parallax-image');
-    const startingPoint = 500; // Punto de partida inicial (ajusta este valor según tus necesidades)
+    const startingPoint = 2500; // Punto de partida inicial (ajusta este valor según tus necesidades)
     const maxScroll = 1000; // Límite máximo de desplazamiento (ajusta este valor según tus necesidades)
 
     const handleScroll = () => {

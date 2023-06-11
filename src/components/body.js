@@ -1,6 +1,6 @@
 import React from 'react';
 import './estilo.css';
-import { Card, CardContent, Grid, Typography, Fab, Box, Container } from '@mui/material';
+import { Card, CardContent, Grid, Typography, Fab, Box, Container, Divider } from '@mui/material';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
@@ -15,7 +15,7 @@ import amazo from '../images/amazo.png'
 const Body = () => {
   return (
     // <React.Fragment>
-    <Container fixed>
+    <Container >
       <div>
         <div style={{ marginTop: '5%' }}>
           <Box sx={{ flexGrow: 1 }}>
@@ -27,9 +27,10 @@ const Body = () => {
                   de los ecosistemas más importantes del planeta, es un tesoro que
                   debemos proteger.
 
-                  <br />Los pueblos indígenas en la Amazonía son clave para la diversidad
+                  Los pueblos indígenas en la Amazonía son clave para la diversidad
                   cultural y el desarrollo sostenible, ya que mantienen sistemas de vida
                   ancestrales en armonía con el medio ambiente.</p>
+                  
                 <img src={amazo} alt="Logo de Amazonía" id="amazo-image" />
               </Grid>
               <Grid item xs={12} md={6}>
@@ -74,6 +75,9 @@ const Body = () => {
           <br />
           <h2 style={{ textAlign: 'center' }}>DISTRIBUCIÓN DE ESPECIES</h2>
           <h1 style={{ textAlign: 'center' }}>Distribución de especies y comunidades Indígenas</h1>
+          <Box sx={{ display: 'flex', justifyContent: 'center', margin: '20px 0', marginBottom: '50px' }}>
+        <Divider sx={{ width: '60px', borderWidth: '3px', backgroundColor: '#8b0000', borderRadius: '4px' }} />
+      </Box>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <img src={grafi} style={{ width: '100%', marginLeft: '1%' }} alt="Imagen 5" />
@@ -90,7 +94,9 @@ const Body = () => {
         <div>
           <h2 style={{ textAlign: 'center' }}>Pueblos Indígenas</h2>
           <h1 style={{ textAlign: 'center' }}>Descubriendo las raíces indígenas</h1>
-          <br />
+          <Box sx={{ display: 'flex', justifyContent: 'center', margin: '20px 0', marginBottom: '50px' }}>
+            <Divider sx={{ width: '60px', borderWidth: '3px', backgroundColor: '#8b0000', borderRadius: '4px' }} />
+          </Box>
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
               <Card className="card" style={{ boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.1)' }}>
