@@ -32,7 +32,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 9999;
   width: 100%;
   text-align: auto;
   margin-top: 70px;
@@ -173,14 +173,13 @@ header {
   color: white;
 }
 
-
-.card {
+ .card {
   width: 552px;
   height: 210px;
   margin-left: calc(7% - 30px);
   margin-top: 20px;
 
-}
+} 
 
 @media (max-width: 600px) {
   .card {
@@ -213,14 +212,6 @@ header {
   margin-left: 65%;
 }
 
-.ca-rd {
-  width: 552px;
-  height: 210px;
-  margin-left: calc(10% - 30px);
-  margin-top: 10px;
-  /* border: 1px solid #000;
-  border-radius: 10px; */
-}
 
 @media (max-width: 600px) {
   .ca-rd {
@@ -251,6 +242,6 @@ header {
 
 img#amazo-image {
   width: 100%;
-  margin-left: 1%;
+  
   margin-top: 7%;
 }
