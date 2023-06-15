@@ -19,22 +19,25 @@ const Body = () => {
       <div>
         <div style={{ marginTop: '5%' }}>
           <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={2}>
-              <Grid item xs={12} md={6}>
-                <h1 style={{ textAlign: '' }}>AMAZONíA: Acerca de
-                  Ia guía ilustrada</h1>
-                <p style={{ textAlign: '' }}> Bienvenidos a la página web de la guía ilustrada de la Amazonía! uno
-                  de los ecosistemas más importantes del planeta, es un tesoro que
-                  debemos proteger.
-
-                  Los pueblos indígenas en la Amazonía son clave para la diversidad
-                  cultural y el desarrollo sostenible, ya que mantienen sistemas de vida
-                  ancestrales en armonía con el medio ambiente.</p>
-
+            <Grid container spacing={2} columns={{ xs: 4, sm: 4, md: 12 }}>
+              <Grid item xs={4} sm={6} md={6}>
+                <Typography component="div"
+                  sx={{ fontSize: 45, fontFamily: 'Poppins', fontWeight: 'bold' }}
+                >
+                  AMAZONÍA: Acerca de la guía ilustrada
+                </Typography>
+                <Typography variant="body1" component="div">
+           ¡Bienvenidos a la página web de la guía ilustrada de la Amazonía! 
+            uno de los ecosistemas más importantes del planeta, es un tesoro que debemos proteger
+           </Typography>  
+           <Typography variant="body1" component="div">
+           Los pueblos indígenas en la Amazonía son clave para la diversidad cultural y el desarrollo sostenible, 
+           ya que mantienen sistemas de vida ancestrales en armonía con el medio ambiente.
+           </Typography>
                 <img src={amazo} alt="Logo de Amazonía" id="amazo-image" />
               </Grid>
               <Grid item xs={12} md={6}>
-                <Card className="ca-rd" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.1))',marginBottom:'30px' }}>
+                <Card className="ca-rd" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.1))', marginBottom: '30px' }}>
                   <CardContent style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                     <Typography variant="h5" component="div" style={{ display: 'flex', alignItems: 'center' }}>
                       <Box mt={2} style={{ marginLeft: '1%' }}>
@@ -94,10 +97,10 @@ const Body = () => {
             <Grid item xs={12} md={6}>
               <Card raise className="card" style={{ boxShadow: '5px 5px 10px 4px rgba(0, 0, 0, 0.2)' }}>
                 <Grid container>
-                  <Grid  item xs={12} sm={4} >
+                  <Grid item xs={12} sm={4} >
                     <box sx={{ position: 'relative', paddingTop: '100%', overflow: 'hidden' }}>
-                  <CardMedia component="img" height="150" image={img1} alt="Imagen 2" style={{ height: '100%', objectFit: 'center'}} />
-                  </box>
+                      <CardMedia component="img" height="150" image={img1} alt="Imagen 2" style={{ height: '100%', objectFit: 'center' }} />
+                    </box>
                   </Grid>
                   <Grid item xs={12} sm={8}>
                     <CardContent>
@@ -107,7 +110,7 @@ const Body = () => {
                       <Typography variant="body2" color="text.secondary" style={{ marginLeft: '10px' }}>
                         El pueblo achuar vive principalmente en el norte del departamento de Loreto, cerca de la frontera con Ecuador. Según el censo de...
                       </Typography>
-                      <Box mt={2} style={{ marginLeft: '65%'}}>
+                      <Box mt={2} style={{ marginLeft: '65%' }}>
                         <Fab variant="extended" size="medium" color="primary">
                           Leer más
                         </Fab>
@@ -120,7 +123,7 @@ const Body = () => {
               <Card className="card" style={{ boxShadow: '5px 5px 10px 4px rgba(0, 0, 0, 0.2)' }}>
                 <Grid container>
                   <Grid item xs={12} sm={4}>
-                    <img src={img2} alt="Imagen 2" style={{  height: '100%',width: '100%', objectFit: 'cover' }} />
+                    <img src={img2} alt="Imagen 2" style={{ height: '100%', width: '100%', objectFit: 'cover' }} />
                   </Grid>
                   <Grid item xs={12} sm={8}>
                     <CardContent>
@@ -130,7 +133,7 @@ const Body = () => {
                       <Typography variant="body2" color="text.secondary" style={{ marginLeft: '10px' }}>
                         El pueblo bora se ubica en el departamento de Loreto, en el territorio bañado por los ríos Ampiyacu y Yahuasyacu, cerca de la ciudad...
                       </Typography>
-                      <Box mt={2} style={{ marginLeft: '65%'}}>
+                      <Box mt={2} style={{ marginLeft: '65%' }}>
                         <Fab variant="extended" size="medium" color="primary">
                           Leer más
                         </Fab>
@@ -143,7 +146,7 @@ const Body = () => {
               <Card className="card" style={{ boxShadow: '5px 5px 10px 4px rgba(0, 0, 0, 0.2)' }}>
                 <Grid container>
                   <Grid item xs={12} sm={4}>
-                    <img src={img3} alt="Imagen 3" style={{  height: '100%',width: '100%', objectFit: 'cover' }} />
+                    <img src={img3} alt="Imagen 3" style={{ height: '100%', width: '100%', objectFit: 'cover' }} />
                   </Grid>
                   <Grid item xs={12} sm={8}>
                     <CardContent>
@@ -154,7 +157,7 @@ const Body = () => {
                         El pueblo ticuna se ha asentado en ambas márgenes del río Amazonas y sus afluentes, cerca de la frontera peruana con Colombia...
                       </Typography>
                       <Box mt={2} className="button-container text-center" style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Fab variant="extended" size="medium" color="primary" style={{ whiteSpace: 'nowrap'}}>
+                        <Fab variant="extended" size="medium" color="primary" style={{ whiteSpace: 'nowrap' }}>
                           Leer más
                         </Fab>
                       </Box>
