@@ -172,7 +172,9 @@ header {
 .footer-email {
   color: white;
 }
-
+  
+  /* start card */
+/* 
  .card {
   width: 552px;
   height: 210px;
@@ -184,64 +186,56 @@ header {
 @media (max-width: 600px) {
   .card {
     width: 100%;
-    /* Cambiar el ancho a 100% en dispositivos con un ancho máximo de 600px */
     margin-left: 0;
-    /* Eliminar el margen izquierdo en dispositivos más pequeños */
     margin-top: 10px;
-    /* Ajustar el margen superior en dispositivos más pequeños */
-    /* Otros estilos necesarios para adaptar el card en dispositivos móviles */
   }
 }
 
 @media (max-width: 960px) {
   .card {
     width: 80%;
-    /* Reducir el ancho del card al 80% del contenedor en dispositivos más pequeños */
     height: auto;
-    /* Permitir que la altura se ajuste automáticamente según el contenido */
     margin-left: auto;
-    /* Centrar horizontalmente el card en dispositivos más pequeños */
     margin-right: auto;
     margin-top: 10px;
-    /* Ajustar el margen superior en dispositivos más pequeños */
-    /* Otros estilos necesarios para adaptar el card en dispositivos con un ancho máximo de 960px */
+    
   }
 }
 
 .button-container {
   margin-left: 65%;
 }
+ */
 
-
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .ca-rd {
     width: 100%;
-    /* Cambiar el ancho a 100% en dispositivos con un ancho máximo de 600px */
+    
     margin-left: 0;
-    /* Eliminar el margen izquierdo en dispositivos más pequeños */
+    
     margin-top: 10px;
-    /* Ajustar el margen superior en dispositivos más pequeños */
-    /* Otros estilos necesarios para adaptar el card en dispositivos móviles */
+    
   }
 }
 
 @media (max-width: 960px) {
   .ca-rd {
     width: 80%;
-    /* Reducir el ancho del card al 80% del contenedor en dispositivos más pequeños */
+    
     height: auto;
-    /* Permitir que la altura se ajuste automáticamente según el contenido */
+    /
     margin-left: auto;
-    /* Centrar horizontalmente el card en dispositivos más pequeños */
+    
     margin-right: auto;
     margin-top: 10px;
-    /* Ajustar el margen superior en dispositivos más pequeños */
-    /* Otros estilos necesarios para adaptar el card en dispositivos con un ancho máximo de 960px */
+
   }
-}
+} */
 
 img#amazo-image {
   width: 100%;
   
-  margin-top: 7%;
+  margin-top: 2%;
 }
+
+  /* end cards */

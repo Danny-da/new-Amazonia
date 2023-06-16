@@ -2,7 +2,7 @@ import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 // import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Header from '../components/Header'
+import Header from '../components/Header';
 import AboutUs from '../views/Home/AboutUs';
 import ChartSpecies from '../views/Home/ChartSpecies';
 import DownloadApp from '../views/Home/DownloadApp';
