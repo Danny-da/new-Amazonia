@@ -18,7 +18,7 @@ const Body2 = () => {
       const scrolled = (scrollTop - startingPoint) * -1;
 
       if (scrolled < maxScroll) {
-        parallaxImage.style.transform = `translateY(${scrolled * 0.1}px)`;
+        parallaxImage.style.transform = `translateY(${scrolled * 0}px)`;
       }
     };
 
