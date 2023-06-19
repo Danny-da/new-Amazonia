@@ -1,13 +1,53 @@
 import React, { useEffect } from 'react';
-import { Divider, Button, TextField, Box } from '@mui/material';
+import { Divider, Button, TextField, Box, Typography, CardMedia, Grid } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import { Carousel } from 'react-responsive-carousel';
+import myImage1 from '../images/amazonas.jpg';
 import myImage2 from '../images/telefono.png';
 import myImage3 from '../images/play.png';
 import myImage4 from '../images/appstore.png';
 import myImage5 from '../images/libro.png';
-// import myImage6 from '../images/amazonas.jpg';
-import Grid from '@material-ui/core/Grid';
+import myImage6 from '../images/c1.jpg';
+import myImage7 from '../images/c2.jpg';
+import myImage8 from '../images/c3.jpg';
+import myImage9 from '../images/c4.jpg';
+import myImage10 from '../images/c5.jpg';
+import myImage11 from '../images/amazonas.jpg';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+
+const useStyles = makeStyles(() => ({
+  text: {
+    color: '#fff',
+    fontSize: '32px',
+    marginBottom: '20px',
+  },
+}));
 
 const Body2 = () => {
+  const classes = useStyles();
+  const renderCarousel = () => {
+    return (
+      <Carousel showArrows={true} showThumbs={false} showStatus={false}>
+        <div>
+          <img src={myImage6} alt="Imagen 6" />
+        </div>
+        <div>
+          <img src={myImage7} alt="Imagen 7" />
+        </div>
+        <div>
+          <img src={myImage8} alt="Imagen 8" />
+        </div>
+        <div>
+          <img src={myImage9} alt="Imagen 9" />
+        </div>
+        <div>
+          <img src={myImage10} alt="Imagen 10" />
+        </div>
+      </Carousel>
+    );
+  };
+
   useEffect(() => {
     const parallaxImage = document.getElementById('parallax-image');
     const startingPoint = 500; // Punto de partida inicial (ajusta este valor según tus necesidades)
@@ -18,7 +58,7 @@ const Body2 = () => {
       const scrolled = (scrollTop - startingPoint) * -1;
 
       if (scrolled < maxScroll) {
-        parallaxImage.style.transform = `translateY(${scrolled * 0.1}px)`;
+        parallaxImage.style.transform = `translateY(${scrolled * 0}px)`;
       }
     };
 
@@ -29,8 +69,75 @@ const Body2 = () => {
     };
   }, []);
 
+  
+
   return (
     <div>
+      {/* Seccion de Especies */}
+      <Box className={`section ${classes.section}`}>
+        <div className="overlay"></div>
+        <img className={`image ${classes.image}`} src={myImage11} alt="Amazonas" />
+        <Typography className="text" variant="h7">
+          Especies
+        </Typography>
+
+        <Grid container spacing={2} alignItems="center" justifyContent="center" item xs={12} md={8} style={{ marginTop: '30px', position: 'absolute' }}>
+          {/* Primera columna */}
+          <Grid item xs={12} sm={4}>
+            <CardMedia
+              component="img"
+              src={myImage6}
+              alt="Imagen 6"
+              height={620}
+              width={400}
+              style={{ marginBottom: '1px' }}
+            />
+          </Grid>
+
+          {/* Segunda columna */}
+          <Grid item xs={6} sm={4}>
+            <CardMedia
+              component="img"
+              src={myImage7}
+              alt="Imagen 7"
+              height={300}
+
+              style={{ marginBottom: '19px' }}
+            />
+            <CardMedia
+              component="img"
+              src={myImage8}
+              alt="Imagen 8"
+              height={300}
+              style={{ marginBottom: '1px' }}
+            />
+          </Grid>
+
+          {/* Tercera columna */}
+          <Grid item xs={6} sm={4}>
+            <CardMedia
+              component="img"
+              src={myImage9}
+              alt="Imagen 9"
+              height={300}
+              style={{ marginBottom: '19px' }}
+            />
+            <CardMedia
+              component="img"
+              src={myImage10}
+              alt="Imagen 10"
+              height={300}
+              style={{ marginBottom: '1px' }}
+            />
+          </Grid>
+        </Grid>
+        
+
+      </Box>
+
+
+
+
       {/* Seccion 1 */}
       <Grid container>
         <Grid container spacing={0} alignItems="center" justifyContent="center" item xs={12} md={6}>
