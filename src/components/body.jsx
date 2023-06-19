@@ -1,7 +1,7 @@
 
 import './estilo.css';
 import { Card, CardContent, Grid, Typography, Fab, Box, Container, Divider } from '@mui/material';
-
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 //import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
@@ -39,7 +39,7 @@ const Body = () => {
                     Los pueblos indígenas en la Amazonía son clave para la diversidad cultural y el desarrollo sostenible,
                     ya que mantienen sistemas de vida ancestrales en armonía con el medio ambiente.
                   </Typography>
-                  <img src={amazo} alt="Logo de Amazonía" id="amazo-image" />
+                  <img src={amazo} alt="Logo de Amazonía" />
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <Card style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.1))', marginBottom: '30px' }}>
@@ -132,7 +132,7 @@ const Body = () => {
 
               </Grid>
 
-              <Grid item xs={12} sm={6} md={8}>
+              <Grid item xs={12} sm={6} >
                 <img src={map} alt="Logo de Amazonía" style={{ width: '100%'}} />
                 <Box mt={2} style={{ textAlign: 'center' }}>
                   <Fab variant="extended" color="primary" aria-label="show more">
