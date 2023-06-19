@@ -1,13 +1,13 @@
 /* Estilos del header */
 header {
   background-color: rgb(83, 104, 40);
-  padding: 30px;
+  padding: 35px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 10px;
-  z-index: 9999;
+  z-index: 1250;
 }
 
 .logo-container {
@@ -32,7 +32,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 1000;
   width: 100%;
   text-align: auto;
   margin-top: 70px;
@@ -173,9 +173,10 @@ header {
 
 .card {
   width: 552px;
-  height: 210px;
+  height: 226px;
   margin-left: calc(7% - 30px);
   margin-top: 20px;
+  
   
 }
 
@@ -188,28 +189,11 @@ header {
   }
 }
 
-@media (max-width: 960px) {
-  .card {
-    width: 80%; /* Reducir el ancho del card al 80% del contenedor en dispositivos más pequeños */
-    height: auto; /* Permitir que la altura se ajuste automáticamente según el contenido */
-    margin-left: auto; /* Centrar horizontalmente el card en dispositivos más pequeños */
-    margin-right: auto;
-    margin-top: 10px; /* Ajustar el margen superior en dispositivos más pequeños */
-    /* Otros estilos necesarios para adaptar el card en dispositivos con un ancho máximo de 960px */
-  }
-}
+
 
 .button-container {
   margin-left: 65%;
-}
-
-.ca-rd {
-  width: 552px;
-  height: 210px;
-  margin-left: calc(10% - 30px);
-  margin-top: 10px;
-  /* border: 1px solid #000;
-  border-radius: 10px; */
+  z-index: 100;
 }
 
 @media (max-width: 600px) {
@@ -232,8 +216,56 @@ header {
   }
 }
 
-img#amazo-image {
+.section {
+  position: relative;
   width: 100%;
-  margin-left: 1%;
-  margin-top: 7%;
+  height: 300px;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  overflow: hidden;
+  background-attachment: fixed;
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.text {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  left: 50%;
+  top: 1%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 960px) {
+  .section {
+    height: 750px; /* Ajusta la altura deseada para pantallas más pequeñas */
+    min-height: unset; /* Elimina la altura mínima */
+  }
+
+  .image {
+    max-height: 100%; /* Ajusta el tamaño máximo de la imagen para adaptarse al contenedor más pequeño */
+  }
+}
+.centeredGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

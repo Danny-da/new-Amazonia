@@ -1,16 +1,33 @@
-import React, { useEffect } from 'react';
-import { Divider, Button, TextField, Box } from '@mui/material';
+import { useEffect } from 'react';
+import { Divider, Button, TextField, Box, Typography, CardMedia, Grid } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import myImage2 from '../images/telefono.png';
 import myImage3 from '../images/play.png';
 import myImage4 from '../images/appstore.png';
 import myImage5 from '../images/libro.png';
-// import myImage6 from '../images/amazonas.jpg';
-import Grid from '@material-ui/core/Grid';
+import myImage6 from '../images/c1.jpg';
+import myImage7 from '../images/c2.jpg';
+import myImage8 from '../images/c3.jpg';
+import myImage9 from '../images/c4.jpg';
+import myImage10 from '../images/c5.jpg';
+import myImage11 from '../images/amazonas.jpg';
+
+
+const useStyles = makeStyles(() => ({
+  text: {
+    color: '#fff',
+    fontSize: '32px',
+    marginBottom: '20px',
+  },
+}));
 
 const Body2 = () => {
+  const classes = useStyles();
+ 
+
   useEffect(() => {
     const parallaxImage = document.getElementById('parallax-image');
-    const startingPoint = 500; // Punto de partida inicial (ajusta este valor según tus necesidades)
+    const startingPoint = 2500; // Punto de partida inicial (ajusta este valor según tus necesidades)
     const maxScroll = 1000; // Límite máximo de desplazamiento (ajusta este valor según tus necesidades)
 
     const handleScroll = () => {
@@ -18,7 +35,8 @@ const Body2 = () => {
       const scrolled = (scrollTop - startingPoint) * -1;
 
       if (scrolled < maxScroll) {
-        parallaxImage.style.transform = `translateY(${scrolled * 0.1}px)`;
+        parallaxImage.style.transform = `translateY(${scrolled * 0}px)`;
+        parallaxImage.style.transform = `translateY(${scrolled * 0}px)`;
       }
     };
 
@@ -29,8 +47,76 @@ const Body2 = () => {
     };
   }, []);
 
+  
+
   return (
     <div>
+      {/* Seccion de Especies */}
+      <Box className={`section ${classes.section}`}>
+        <div className="overlay"></div>
+        <img className={`image ${classes.image}`} src={myImage11} alt="Amazonas" />
+        <Typography className="text" variant="h7">
+          Especies
+        </Typography>
+
+        <Grid container spacing={2} alignItems="center" justifyContent="center" item xs={12} md={8} style={{ marginTop: '30px', position: 'absolute' }}>
+          {/* Primera columna */}
+          <Grid item xs={12} sm={4}>
+            <CardMedia
+              component="img"
+              src={myImage6}
+              alt="Imagen 6"
+              height={660}
+             
+              style={{ marginBottom: '1px' }}
+            />
+          </Grid>
+
+          {/* Segunda columna */}
+          <Grid item xs={6} sm={4}>
+            <CardMedia
+              component="img"
+              src={myImage7}
+              alt="Imagen 7"
+              height={320}
+              
+
+              style={{ marginBottom: '19px' }}
+            />
+            <CardMedia
+              component="img"
+              src={myImage8}
+              alt="Imagen 8"
+              height={320}
+              style={{ marginBottom: '1px' }}
+            />
+          </Grid>
+
+          {/* Tercera columna */}
+          <Grid item xs={6} sm={4}>
+            <CardMedia
+              component="img"
+              src={myImage9}
+              alt="Imagen 9"
+              height={320}
+              style={{ marginBottom: '19px' }}
+            />
+            <CardMedia
+              component="img"
+              src={myImage10}
+              alt="Imagen 10"
+              height={320}
+              style={{ marginBottom: '1px' }}
+            />
+          </Grid>
+        </Grid>
+        
+
+      </Box>
+
+
+
+
       {/* Seccion 1 */}
       <Grid container>
         <Grid container spacing={0} alignItems="center" justifyContent="center" item xs={12} md={6}>
@@ -39,9 +125,9 @@ const Body2 = () => {
               Tu <span style={{ color: '#ed6c02' }}>guía móvil</span> de<br /> especies y<br /> pueblos indígenas
             </h1>
             <h4 style={{ fontWeight: 'normal', maxWidth: '100%', textAlign: 'center' }}>
-              "Amazonia App: Explora, Conecta y Ahorra: Descubre todo el<br />
+              Amazonia App: Explora, Conecta y Ahorra: Descubre todo el<br />
               contenido desde cualquier lugar con tu smartphone Android y<br />
-              consume menos datos".
+              consume menos datos.
             </h4>
           </div>
           <div style={{ display: 'flex', justifyContent: 'flex-start', marginTop: '2%', marginLeft: '10%' }}>
@@ -59,10 +145,10 @@ const Body2 = () => {
         </Grid>
       </Grid>
 
-      {/* Separador */}
-      <Box sx={{ display: 'flex', justifyContent: 'center', margin: '20px 0', marginBottom: '50px' }}>
-        <Divider sx={{ width: '100px', borderWidth: '3px', backgroundColor: '#8b0000', borderRadius: '4px' }} />
-      </Box>
+        {/* Separador */}
+        <Box sx={{ display: 'flex', justifyContent: 'center', margin: '20px 0', marginBottom: '50px' }}>
+          <Divider sx={{ width: '100px', borderWidth: '3px', backgroundColor: '#8b0000', borderRadius: '4px' }} />
+        </Box>
 
       {/* Seccion 2 */}
       <Grid container>
