@@ -5,7 +5,7 @@ import Header from './components/header';
 import Menu from './components/menu';
 import Home from './components/home';
 import Body2 from './components/body2';
-import Footer from './components/footer';
+import Footer from './components/footer'
 import Body from './components/body'
 
 
@@ -20,7 +20,6 @@ const AppRoutes = () => {
           <Menu />
           <Home />
           <Body/>
-          
           <Body2 />
           <Footer />
         </div>

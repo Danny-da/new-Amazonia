@@ -50,7 +50,7 @@ const Body2 = () => {
 
   useEffect(() => {
     const parallaxImage = document.getElementById('parallax-image');
-    const startingPoint = 500; // Punto de partida inicial (ajusta este valor según tus necesidades)
+    const startingPoint = 2500; // Punto de partida inicial (ajusta este valor según tus necesidades)
     const maxScroll = 1000; // Límite máximo de desplazamiento (ajusta este valor según tus necesidades)
 
     const handleScroll = () => {
@@ -58,6 +58,7 @@ const Body2 = () => {
       const scrolled = (scrollTop - startingPoint) * -1;
 
       if (scrolled < maxScroll) {
+        parallaxImage.style.transform = `translateY(${scrolled * 0}px)`;
         parallaxImage.style.transform = `translateY(${scrolled * 0}px)`;
       }
     };
@@ -161,45 +162,47 @@ const Body2 = () => {
           </div>
         </Grid>
 
-        <Grid container spacing={0} alignItems="center" justifyContent="center" item xs={12} md={6} style={{ marginTop: '30px' }}>
-          <img id="parallax-image" src={myImage2} alt="Teléfono" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', width: '50%', height: 'auto', maxWidth: '100%' }} />
+          <Grid container spacing={0} alignItems="center" justifyContent="center" item xs={12} md={6} style={{ marginTop: '30px' }}>
+            <img id="parallax-image" src={myImage2} alt="Teléfono" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', width: '50%', height: 'auto', maxWidth: '100%' }} />
+          </Grid>
         </Grid>
-      </Grid>
 
-      {/* Separador */}
-      <Box sx={{ display: 'flex', justifyContent: 'center', margin: '20px 0', marginBottom: '50px' }}>
-        <Divider sx={{ width: '100px', borderWidth: '3px', backgroundColor: '#8b0000', borderRadius: '4px' }} />
-      </Box>
+        {/* Separador */}
+        <Box sx={{ display: 'flex', justifyContent: 'center', margin: '20px 0', marginBottom: '50px' }}>
+          <Divider sx={{ width: '100px', borderWidth: '3px', backgroundColor: '#8b0000', borderRadius: '4px' }} />
+        </Box>
 
-      {/* Seccion 2 */}
-      <Grid container>
-        <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" sx={{ minHeight: '100vh' }} item xs={12} md={6}>
-          <img src={myImage5} alt="Imagen 1" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', width: '60%', height: 'auto' }} />
+        {/* Seccion 2 */}
+        <Grid container>
+          <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" sx={{ minHeight: '100vh' }} item xs={12} md={6}>
+            <img src={myImage5} alt="Imagen 1" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', width: '60%', height: 'auto' }} />
+          </Grid>
+          <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" item xs={12} md={6} style={{ marginTop: '50px' }}>
+            <Box component="form" sx={{ '& .MuiTextField-root': { m: 1, width: '25ch', height: '50px' }, textAlign: 'center' }} noValidate autoComplete="off">
+              <h5 style={{ fontWeight: 'normal', textAlign: 'center' }}>FORMULARIO DE CONTACTO</h5>
+              <h1 style={{ textAlign: 'center' }}>Ponte en contacto con<br />nosotros</h1>
+              <div>
+                <TextField id="standard-basic" label="Nombres" variant="standard" />
+                <TextField id="standard-basic1" label="Apellidos" variant="standard" />
+              </div>
+              <div>
+                <TextField id="standard-basic" label="Asunto" variant="standard" />
+                <TextField id="standard-basic1" label="Correo" variant="standard" />
+              </div>
+              <div>
+                <TextField id="standard-basic" label="Celular" variant="standard" />
+              </div>
+              <div>
+                <Button variant="contained" color="primary">
+                  Enviar
+                </Button>
+              </div>
+            </Box>
+          </Grid>
         </Grid>
-        <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" item xs={12} md={6} style={{ marginTop: '50px' }}>
-          <Box component="form" sx={{ '& .MuiTextField-root': { m: 1, width: '25ch', height: '50px' }, textAlign: 'center' }} noValidate autoComplete="off">
-            <h5 style={{ fontWeight: 'normal', textAlign: 'center' }}>FORMULARIO DE CONTACTO</h5>
-            <h1 style={{ textAlign: 'center' }}>Ponte en contacto con<br />nosotros</h1>
-            <div>
-              <TextField id="standard-basic" label="Nombres" variant="standard" />
-              <TextField id="standard-basic1" label="Apellidos" variant="standard" />
-            </div>
-            <div>
-              <TextField id="standard-basic" label="Asunto" variant="standard" />
-              <TextField id="standard-basic1" label="Correo" variant="standard" />
-            </div>
-            <div>
-              <TextField id="standard-basic" label="Celular" variant="standard" />
-            </div>
-            <div>
-              <Button variant="contained" color="primary">
-                Enviar
-              </Button>
-            </div>
-          </Box>
-        </Grid>
-      </Grid>
-    </div>
+      </div>
+  
+
   );
 };
 
