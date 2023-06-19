@@ -1,7 +1,7 @@
-import React from 'react';
+//import React from 'react';
 import './estilo.css';
 import { Card, CardContent, Grid, Typography, Fab, Box, Container, Divider } from '@mui/material';
-import CssBaseline from '@mui/material/CssBaseline';
+
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 //import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
@@ -20,8 +20,7 @@ import FirstCards from './FirstCards';
 const Body = () => {
   return (
     // <React.Fragment>
-    <React.Fragment>
-      <CssBaseline />
+      
       <Container fixed>
         <div>
           <div>
@@ -133,8 +132,8 @@ const Body = () => {
 
               </Grid>
 
-              <Grid item xs={12} md={6}>
-                <img src={map} alt="Logo de Amazonía" style={{ width: '100%', marginLeft: '1%' }} />
+              <Grid item xs={12} sm={6} md={8}>
+                <img src={map} alt="Logo de Amazonía" style={{ width: '100%'}} />
                 <Box mt={2} style={{ textAlign: 'center' }}>
                   <Fab variant="extended" color="primary" aria-label="show more">
                     Ver más
@@ -150,7 +149,6 @@ const Body = () => {
 
         </div>
       </Container >
-    </React.Fragment >
   );
 };
 
