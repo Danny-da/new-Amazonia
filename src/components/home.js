@@ -47,21 +47,21 @@ const Home = () => {
       </Carousel>
       <div className="content-container">
         <Box sx={{ textAlign: 'left', mt: 2 }}>
-  <div className="text-container">
-    <Typography variant="h1" sx={{ fontSize: { xs: '1.5rem', sm: '2.5rem' } }} className="title">
-      Explora la diversidad oculta de los pueblos indígenas y la vida silvestre
-    </Typography>
-  </div>
-</Box>
-<Box sx={{ textAlign: 'left', mt: 2 }}>
-  <div className="text-container">
-    <Typography variant="body1" sx={{ fontSize: { xs: '0.9rem', sm: '1.2rem' } }} className="description">
-      Explora la increíble biodiversidad de Loreto en la Amazonia a través de nuestras guías ilustradas de especies
-      animales. Descarga nuestra aplicación móvil y lleva contigo este increíble mundo de conocimiento en tus
-      aventuras por la selva amazónica.
-    </Typography>
-  </div>
-</Box>
+          <div className="text-container">
+            <Typography variant="h1" sx={{ fontSize: { xs: '1.5rem', sm: '2.5rem' } }} className="title">
+              Explora la diversidad oculta de los pueblos indígenas y la vida silvestre
+            </Typography>
+          </div>
+        </Box>
+        <Box sx={{ textAlign: 'left', mt: 2 }}>
+          <div className="text-container">
+            <Typography variant="body1" sx={{ fontSize: { xs: '0.9rem', sm: '1.2rem' } }} className="description">
+              Explora la increíble biodiversidad de Loreto en la Amazonia a través de nuestras guías ilustradas de especies
+              animales. Descarga nuestra aplicación móvil y lleva contigo este increíble mundo de conocimiento en tus
+              aventuras por la selva amazónica.
+            </Typography>
+          </div>
+        </Box>
 
       </div>
     </div>
