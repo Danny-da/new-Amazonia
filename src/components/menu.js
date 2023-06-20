@@ -42,8 +42,6 @@ const Menu = () => {
     },
   };
 
-  
-
   const menuItems = ['Aves', 'Mamíferos', 'Reptiles', 'Anfibios', 'Peces', 'Insectos', 'Árboles', 'Palmeras',];
 
   return (
@@ -84,7 +82,7 @@ const Menu = () => {
         <Box sx={{ width: 200, paddingTop: '70px', height: '100%', display: 'flex', flexDirection: 'column', backgroundColor: '#e9f6f6' }}>
           <List sx={{ flex: '1 1 auto', marginTop: '10px', spacing: 10 }}>
             {menuItems.map((item, index) => (
-              <ListItem button key={index} sx={{ marginBottom: '17%', textAlign: 'center' }}>
+              <ListItem key={index} sx={{ marginBottom: '17%', textAlign: 'center' }}>
                 <ListItemText primary={item} sx={{ color: 'black' }} />
               </ListItem>
             ))}

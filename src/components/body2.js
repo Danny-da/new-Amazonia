@@ -47,7 +47,6 @@ const Body2 = () => {
     };
   }, []);
 
-  
 
   return (
     <div>
@@ -110,11 +109,7 @@ const Body2 = () => {
             />
           </Grid>
         </Grid>
-        
-
       </Box>
-
-
 
 
       {/* Seccion 1 */}
@@ -146,13 +141,13 @@ const Body2 = () => {
       </Grid>
 
         {/* Separador */}
-        <Box sx={{ display: 'flex', justifyContent: 'center', margin: '20px 0', marginBottom: '50px' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', margin: '20px 0',marginBottom:'7%' }}>
           <Divider sx={{ width: '100px', borderWidth: '3px', backgroundColor: '#8b0000', borderRadius: '4px' }} />
         </Box>
 
       {/* Seccion 2 */}
       <Grid container>
-        <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" sx={{ minHeight: '100vh' }} item xs={12} md={6}>
+        <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" item xs={12} md={6}>
           <img src={myImage5} alt="Imagen 1" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', width: '65%', height: 'auto' }} />
         </Grid>
         <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" item xs={12} md={6} style={{ marginTop: '50px' }}>

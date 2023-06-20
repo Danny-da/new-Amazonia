@@ -5,7 +5,8 @@ import { Card, CardContent, Typography, Grid, Box, Fab } from '@mui/material';
 const CustomCard = ({ imageSrc, title, subtitle }) => {
   const cardStyle = {
     boxShadow: '5px 5px 10px 4px rgba(0, 0, 0, 0.2)',
-    marginBottom: '30px',
+    marginBottom: '20px',
+  
   };
 
   const imageStyle = {
