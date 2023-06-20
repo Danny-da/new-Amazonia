@@ -1,10 +1,10 @@
-//import React from 'react';
+
 import './estilo.css';
 import { Card, CardContent, Grid, Typography, Fab, Box, Container, Divider } from '@mui/material';
-
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+//import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import img1 from '../images/card.png'
 import img2 from '../images/card2.png'
 import img3 from '../images/card 3.png'
@@ -13,7 +13,7 @@ import content from '../images/Content.png'
 import grafi from '../images/grafi.png'
 import amazo from '../images/amazo.png'
 import CustomCard from './CustomCard';
-//import FirstCards from './FirstCards';
+import FirstCards from './FirstCards';
 
 
 
@@ -39,9 +39,7 @@ const Body = () => {
                     Los pueblos indígenas en la Amazonía son clave para la diversidad cultural y el desarrollo sostenible,
                     ya que mantienen sistemas de vida ancestrales en armonía con el medio ambiente.
                   </Typography>
-                  
-                  <img src={amazo} alt="Logo de Amazonía" id ="amazo-image" />
-                  
+                  <img src={amazo} alt="Logo de Amazonía" />
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <Card style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.1))', marginBottom: '30px' }}>
@@ -58,7 +56,7 @@ const Body = () => {
                     </CardContent>
                   </Card>
 
-                  <Card style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.1))' }}>
+                  {/* <Card style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.1))' }}>
                     <CardContent>
                       <Typography variant="h5" component="div" style={{ display: 'flex', alignItems: 'center' }}>
                         <Box mt={2} style={{ marginLeft: '1%' }}>
@@ -70,8 +68,16 @@ const Body = () => {
                         Nuestro objetivo es dar a conocer la importancia de la diversidad biológica y fomentar su protección y respeto. Reconocemos que la degradación y el cambio climático afectan a todos, pero especialmente a las regiones más pobres y a las poblaciones vulnerables que dependen de los recursos naturales para sobrevivir.
                       </Typography>
                     </CardContent>
-                  </Card> 
-                  
+                  </Card> */}
+                  <FirstCards
+                  title="Nuestro objetivo"
+                  content="Nuestro objetivo es dar a conocer la importancia de la diversidad
+                  biológica y fomentar su protección y respeto. Reconocemos que
+                  la degradación y el cambio climático afectan a todos, pero
+                  especialmente a las regiones más pobres y a las poblaciones
+                  vulnerables que dependen de los recursos naturales para
+                  sobrevivir."
+                  />
                 </Grid>
               </Grid>
             </Box>
@@ -101,10 +107,8 @@ const Body = () => {
             <Box sx={{ display: 'flex', justifyContent: 'center', margin: '20px 0', marginBottom: '50px' }}>
               <Divider sx={{ width: '60px', borderWidth: '3px', backgroundColor: '#8b0000', borderRadius: '4px' }} />
             </Box>
-
-
-            <Grid container>
-            <Grid container spacing={0} alignItems="center" justifyContent="center" item xs={12} md={6}>
+            <Grid container spacing={2} columns={{ xs: 4, sm: 4, md: 12 }}>
+              <Grid item xs={4} sm={6} md={6}>
               <CustomCard
                 imageSrc={img1}
                 title="¿Conoces a la etnia de los
@@ -128,9 +132,8 @@ const Body = () => {
 
               </Grid>
 
-              <Grid container spacing={0} alignItems="center" justifyContent="center" item xs={12} md={6}>
-                <img src={map} alt="Logo de Amazonía" style={{ width: '140%'}} />
-                
+              <Grid item xs={12} sm={6} >
+                <img src={map} alt="Logo de Amazonía" style={{ width: '100%'}} />
                 <Box mt={2} style={{ textAlign: 'center' }}>
                   <Fab variant="extended" color="primary" aria-label="show more">
                     Ver más
@@ -138,7 +141,7 @@ const Body = () => {
                   </Fab>
                 </Box>
               </Grid>
-              
+
             </Grid>
           </div>
 
