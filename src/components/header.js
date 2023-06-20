@@ -1,4 +1,3 @@
-import React from 'react';
 import './estilo.css';
 import myImage from '../images/logo.png';
 import myImaage from '../images/splash.png';

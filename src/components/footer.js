@@ -1,4 +1,4 @@
-import React from 'react';
+
 import myImage1 from '../images/footer.png';
 /* import myImage2 from '../images/footer2.png'; */
 
