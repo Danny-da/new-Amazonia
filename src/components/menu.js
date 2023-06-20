@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Tab, Tabs, Box, Typography, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import image1 from '../images/heder.png';
+
 
 const Menu = () => {
   const [value, setValue] = useState(0);
@@ -40,12 +40,6 @@ const Menu = () => {
     '@media (max-width: 700px)': {
       fontSize: '0.5rem',
     },
-  };
-
-  const containerStyles = {
-    backgroundImage: `url(${image1})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
   };
 
   const menuItems = ['Aves', 'Mamíferos', 'Reptiles', 'Anfibios', 'Peces', 'Insectos', 'Árboles', 'Palmeras',];

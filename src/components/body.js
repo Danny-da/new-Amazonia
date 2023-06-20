@@ -103,8 +103,8 @@ const Body = () => {
             </Box>
 
 
-            <Grid container>
-            <Grid container spacing={0} alignItems="center" justifyContent="center" item xs={12} md={6}>
+            <Grid container justifyContent="center" >
+            <Grid container spacing={0} alignItems="center" justifyContent="center" direction="column" item xs={12} md={6}>
               <CustomCard
                 imageSrc={img1}
                 title="¿Conoces a la etnia de los
@@ -128,17 +128,15 @@ const Body = () => {
 
               </Grid>
 
-              <Grid container spacing={0} alignItems="center" justifyContent="center" item xs={12} md={6}>
-                <img src={map} alt="Logo de Amazonía" style={{ width: '140%'}} />
-                
-                <Box mt={2} style={{ textAlign: 'center' }}>
+              <Grid container spacing={0} alignItems="center" justifyContent="center" item xs={10} md={6}>
+                <img src={map} alt="Logo de Amazonía" style={{ width: '125%'}} />
+              </Grid>
+              <Box  mt={2} style={{ textAlign: 'center' }}>
                   <Fab variant="extended" color="primary" aria-label="show more">
                     Ver más
                     <ChevronRightIcon fontSize="medium" style={{ marginLeft: '5px' }} />
                   </Fab>
                 </Box>
-              </Grid>
-              
             </Grid>
           </div>
 
