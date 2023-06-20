@@ -19,6 +19,7 @@ const AppRoutes = () => {
           <Header />
           <Menu />
           <Home />
+          
           <Body/>
           <Body2 />
           <Footer />
