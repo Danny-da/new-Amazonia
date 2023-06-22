@@ -1,6 +1,8 @@
-import { useEffect } from 'react';
-import { Divider, Button, TextField, Box, Typography, CardMedia, Grid } from '@mui/material';
+import { useEffect, useState } from 'react';
+import { Divider, Button, TextField, Box, Typography, CardMedia, Grid, Card, CardContent } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import myImage2 from '../images/telefono.png';
 import myImage3 from '../images/play.png';
 import myImage4 from '../images/appstore.png';
@@ -23,7 +25,24 @@ const useStyles = makeStyles(() => ({
 
 const Body2 = () => {
   const classes = useStyles();
- 
+  const [showCards, setShowCards] = useState(true);
+  const [showCarousel, setShowCarousel] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const windowWidth = window.innerWidth;
+      setShowCards(windowWidth >= 700);
+      setShowCarousel(windowWidth < 700);
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const parallaxImage = document.getElementById('parallax-image');
@@ -51,6 +70,7 @@ const Body2 = () => {
   return (
     <div>
       {/* Seccion de Especies */}
+      {showCards && (
       <Box className={`section ${classes.section}`}>
         <div className="overlay"></div>
         <img className={`image ${classes.image}`} src={myImage11} alt="Amazonas" />
@@ -58,59 +78,122 @@ const Body2 = () => {
           Especies
         </Typography>
 
-        <Grid container spacing={2} alignItems="center" justifyContent="center" item xs={12} md={8} style={{ marginTop: '30px', position: 'absolute' }}>
+        <Grid container spacing={2} alignItems="center" justifyContent="center" item xs={10} md={9} style={{ marginTop: '30px', position: 'absolute' }}>
           {/* Primera columna */}
-          <Grid item xs={12} sm={4}>
-            <CardMedia
-              component="img"
-              src={myImage6}
-              alt="Imagen 6"
-              height={660}
-             
-              style={{ marginBottom: '1px' }}
-            />
+          <Grid item xs={4} sm={4}>
+            <Card style={{ alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                <CardMedia
+                  component="img"
+                  src={myImage6}
+                  alt="Imagen 6"
+                  style={{ objectFit: 'cover', width: '127%', height: '127%' }}
+                />
+              </div>
+              <CardContent style={{ background: 'rgba(0, 0, 0, 0.2)', color: 'white' }}>
+                <Typography variant="body1">
+                  Nombre / Ncientifico
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
 
           {/* Segunda columna */}
-          <Grid item xs={6} sm={4}>
-            <CardMedia
-              component="img"
-              src={myImage7}
-              alt="Imagen 7"
-              height={320}
-              
-
-              style={{ marginBottom: '19px' }}
-            />
-            <CardMedia
-              component="img"
-              src={myImage8}
-              alt="Imagen 8"
-              height={320}
-              style={{ marginBottom: '1px' }}
-            />
+          <Grid item xs={4} sm={4}>
+            <Card style={{ marginBottom: '15px' }} >
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                <CardMedia
+                  component="img"
+                  src={myImage7}
+                  alt="Imagen 7"
+                  style={{ objectFit: 'cover', width: '70%', height: '70%' }}
+                />
+              </div>
+              <CardContent style={{ background: 'rgba(0, 0, 0, 0.2)', color: 'white' }}>
+                <Typography variant="body1">
+                  Nombre / Ncientifico
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                <CardMedia
+                  component="img"
+                  src={myImage8}
+                  alt="Imagen 8"
+                  style={{ objectFit: 'cover', width: '95%', height: '95%' }}
+                />
+              </div>
+              <CardContent style={{ background: 'rgba(0, 0, 0, 0.2)', color: 'white' }}>
+                <Typography variant="body1">
+                  Nombre / Ncientifico
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
 
           {/* Tercera columna */}
-          <Grid item xs={6} sm={4}>
-            <CardMedia
-              component="img"
-              src={myImage9}
-              alt="Imagen 9"
-              height={320}
-              style={{ marginBottom: '19px' }}
-            />
-            <CardMedia
-              component="img"
-              src={myImage10}
-              alt="Imagen 10"
-              height={320}
-              style={{ marginBottom: '1px' }}
-            />
+          <Grid item xs={4} sm={4}>
+            <Card style={{ marginBottom: '15px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                <CardMedia
+                  component="img"
+                  src={myImage9}
+                  alt="Imagen 9"
+                  style={{ objectFit: 'cover', width: '120%', height: '120%' }}
+                />
+              </div>
+              <CardContent style={{ background: 'rgba(0, 0, 0, 0.2)', color: 'white' }}>
+                <Typography variant="body1">
+                  Nombre / Ncientifico
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                <CardMedia
+                  component="img"
+                  src={myImage10}
+                  alt="Imagen 10"
+                  style={{ objectFit: 'cover', width: '84%', height: '90%' }}
+                />
+              </div>
+              <CardContent style={{ background: 'rgba(0, 0, 0, 0.2)', color: 'white' }}>
+                <Typography variant="body1">
+                  Nombre / Ncientifico
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
         </Grid>
       </Box>
+  )}
 
+       {/* Carrusel */}
+      {showCarousel && (
+        <Carousel>
+          <div>
+            <img src={myImage6} alt="Imagen 6" />
+            <p className="legend">Nombre / Ncientifico</p>
+          </div>
+          <div>
+            <img src={myImage7} alt="Imagen 7" />
+            <p className="legend">Nombre / Ncientifico</p>
+          </div>
+          <div>
+            <img src={myImage8} alt="Imagen 8" />
+            <p className="legend">Nombre / Ncientifico</p>
+          </div>
+          <div>
+            <img src={myImage9} alt="Imagen 9" />
+            <p className="legend">Nombre / Ncientifico</p>
+          </div>
+          <div>
+            <img src={myImage10} alt="Imagen 10" />
+            <p className="legend">Nombre / Ncientifico</p>
+          </div>
+        </Carousel>
+      )}
 
       {/* Seccion 1 */}
       <Grid container>
@@ -136,14 +219,14 @@ const Body2 = () => {
         </Grid>
 
         <Grid container spacing={0} alignItems="center" justifyContent="center" item xs={12} md={6} style={{ marginTop: '30px' }}>
-          <img id="parallax-image" src={myImage2} alt="Teléfono" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', width: '50%',  height: 'auto', maxWidth: '100%' }} />
+          <img id="parallax-image" src={myImage2} alt="Teléfono" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', width: '50%', height: 'auto', maxWidth: '100%' }} />
         </Grid>
       </Grid>
 
-        {/* Separador */}
-        <Box sx={{ display: 'flex', justifyContent: 'center', margin: '20px 0',marginBottom:'7%' }}>
-          <Divider sx={{ width: '100px', borderWidth: '3px', backgroundColor: '#8b0000', borderRadius: '4px' }} />
-        </Box>
+      {/* Separador */}
+      <Box sx={{ display: 'flex', justifyContent: 'center', margin: '20px 0', marginBottom: '7%' }}>
+        <Divider sx={{ width: '100px', borderWidth: '3px', backgroundColor: '#8b0000', borderRadius: '4px' }} />
+      </Box>
 
       {/* Seccion 2 */}
       <Grid container>
@@ -151,7 +234,7 @@ const Body2 = () => {
           <img src={myImage5} alt="Imagen 1" style={{ filter: 'drop-shadow(2px 4px 20px rgba(0, 0, 0, 0.9))', width: '65%', height: 'auto' }} />
         </Grid>
         <Grid container spacing={0} direction="column" alignItems="center" justifyContent="center" item xs={12} md={6} style={{ marginTop: '50px' }}>
-          <Box component="form" sx={{ '& .MuiTextField-root': { m: 1}, textAlign: 'center' }} noValidate autoComplete="off">
+          <Box component="form" sx={{ '& .MuiTextField-root': { m: 1 }, textAlign: 'center' }} noValidate autoComplete="off">
             <h5 style={{ fontWeight: 'normal', textAlign: 'center' }}>FORMULARIO DE CONTACTO</h5>
             <h1 style={{ textAlign: 'center' }}>Ponte en contacto con<br />nosotros</h1>
             <div>
