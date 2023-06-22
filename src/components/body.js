@@ -1,10 +1,11 @@
 //import React from 'react';
 import './estilo.css';
 import { Card, CardContent, Grid, Typography, Fab, Box, Container, Divider } from '@mui/material';
-
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+
 import img1 from '../images/card.png'
 import img2 from '../images/card2.png'
 import img3 from '../images/card 3.png'
@@ -13,6 +14,7 @@ import content from '../images/Content.png'
 import grafi from '../images/grafi.png'
 import amazo from '../images/amazo.png'
 import CustomCard from './CustomCard';
+//import BodyPi from './BodyPi';
 //import FirstCards from './FirstCards';
 
 
@@ -132,10 +134,12 @@ const Body = () => {
                 <img src={map} alt="Logo de Amazonía" style={{ width: '125%'}} />
               </Grid>
               <Box  mt={2} style={{ textAlign: 'center' }}>
+                <Link to= "">
                   <Fab variant="extended" color="primary" aria-label="show more">
                     Ver más
                     <ChevronRightIcon fontSize="medium" style={{ marginLeft: '5px' }} />
                   </Fab>
+                  </Link>
                 </Box>
             </Grid>
           </div>
