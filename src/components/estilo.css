@@ -32,7 +32,7 @@ header {
   overflow: hidden;
   top: 70px;
   left: 0;
-  z-index: 1250;
+  z-index: 1000;
   width: 100%;
   text-align: auto;
   
@@ -148,7 +148,7 @@ header {
 }
 
 .footer-bar {
-  background-color: rgb(83, 104, 40);
+  background-color: rgb(1, 94, 128)   ;
   height: 10px;
 }
 

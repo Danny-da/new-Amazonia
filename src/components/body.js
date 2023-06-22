@@ -35,10 +35,10 @@ const Body = () => {
                     ¡Bienvenidos a la página web de la guía ilustrada de la Amazonía!
                     uno de los ecosistemas más importantes del planeta, es un tesoro que debemos proteger
                   </Typography>
-                  <Typography variant="body1" component="div">
-                    Los pueblos indígenas en la Amazonía son clave para la diversidad cultural y el desarrollo sostenible,
-                    ya que mantienen sistemas de vida ancestrales en armonía con el medio ambiente.
-                  </Typography>
+                    <Typography variant="body1" component="div">
+                      Los pueblos indígenas en la Amazonía son clave para la diversidad cultural y el desarrollo sostenible,
+                      ya que mantienen sistemas de vida ancestrales en armonía con el medio ambiente.
+                    </Typography>
                   
                   <img src={amazo} alt="Logo de Amazonía" id ="amazo-image" />
                   

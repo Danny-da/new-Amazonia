@@ -7,6 +7,7 @@ import Home from './components/home';
 import Body2 from './components/body2';
 import Body from './components/body';
 import Footer from './components/footer';
+//import BodyPi from './components/BodyPi';
 
 
 const theme = createTheme();
@@ -22,6 +23,7 @@ const AppRoutes = () => {
           
           <Body/>
           <Body2 />
+          {/* <BodyPi/> */}
           <Footer />
         </div>
       </Router>
