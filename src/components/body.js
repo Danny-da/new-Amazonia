@@ -141,7 +141,10 @@ const Body = () => {
           </div>
 
           {/* terminacion de pueblos Indigenas */}
-
+           {/* Separador */}
+      <Box sx={{ display: 'flex', justifyContent: 'center', margin: '20px 0', marginBottom: '5%' }}>
+        <Divider sx={{ width: '100px', borderWidth: '3px', backgroundColor: '#8b0000', borderRadius: '4px' }} />
+      </Box>
         </div>
       </Container >
   );
