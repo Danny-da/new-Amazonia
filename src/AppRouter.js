@@ -1,13 +1,10 @@
-
-import { BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import Header from './components/header';
 import Menu from './components/menu';
 import Home from './components/home';
-import Body2 from './components/body2';
-import Body from './components/body';
 import Footer from './components/footer';
-
+import VistaEspecies from './components/VistaEspecies';
 
 const theme = createTheme();
 
@@ -18,10 +15,11 @@ const AppRoutes = () => {
         <div>
           <Header />
           <Menu />
-          <Home />
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/Especies" element={<VistaEspecies />} />
+          </Routes>
           
-          <Body/>
-          <Body2 />
           <Footer />
         </div>
       </Router>
