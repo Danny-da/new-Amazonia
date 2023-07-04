@@ -1,17 +1,16 @@
-import React from 'react';
+//import React from 'react';
 import { Grid, Typography, Box } from '@mui/material';
 import Indigenas from '../images/img-landing.png';
 import { Container } from '@material-ui/core';
 import Header from './header';
-import Footer from './footer';
 
 export default function BodyPi() {
   return (
     <>
       <Header />
-      <Container fixed>
+      <Container fixed >
         <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={2} columns={{ xs: 4, sm: 4, md: 12 }}>
+          <Grid container spacing={2} columns={{ xs: 4, sm: 4, md: 12 }} sx={{ mt: 12 }}>
             <Grid item xs={4} sm={6} md={6}>
               <img src={Indigenas} alt="Logo de Amazonía" id="amazo-image" />
             </Grid>
@@ -55,7 +54,6 @@ con los europeos.</li>
           </Grid>
         </Box>
       </Container>
-      <Footer />
     </>
   );
 }

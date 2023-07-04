@@ -7,6 +7,8 @@ import myImage2 from '../images/img2.png';
 import myImage3 from '../images/img3.png';
 import myImage4 from '../images/img4.png';
 import './estilo.css'; // Importar el archivo de estilos
+import Body from './body';
+import Body2 from './body2';
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -22,8 +24,10 @@ const Home = () => {
   }, []);
 
   return (
+    <>
+    
     <div className="home-container">
-      <Carousel showThumbs={false} selectedItem={activeIndex}>
+      <Carousel showIndicators={false} showThumbs={false} selectedItem={activeIndex} swipeable={false}>
         <div className="image-overlay">
           <div className="carousel-image-container">
             <img src={myImage1} alt="1" className="carousel-image" />
@@ -65,6 +69,8 @@ const Home = () => {
 
       </div>
     </div>
+    <Body/>
+          <Body2/></>
   );
 };
 

@@ -1,7 +1,7 @@
 //import React from 'react';
 import './estilo.css';
 import { Card, CardContent, Grid, Typography, Fab, Box, Container, Divider } from '@mui/material';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
@@ -14,9 +14,6 @@ import content from '../images/Content.png'
 import grafi from '../images/grafi.png'
 import amazo from '../images/amazo.png'
 import CustomCard from './CustomCard';
-//import BodyPi from './BodyPi';
-//import FirstCards from './FirstCards';
-
 
 
 const Body = () => {
@@ -134,7 +131,7 @@ const Body = () => {
                 <img src={map} alt="Logo de Amazonía" style={{ width: '125%'}} />
               </Grid>
               <Box  mt={2} style={{ textAlign: 'center' }}>
-                <Link to= "">
+                <Link to= "/bodypi">
                   <Fab variant="extended" color="primary" aria-label="show more">
                     Ver más
                     <ChevronRightIcon fontSize="medium" style={{ marginLeft: '5px' }} />
@@ -145,10 +142,12 @@ const Body = () => {
           </div>
 
           {/* terminacion de pueblos Indigenas */}
-
+           {/* Separador */}
+      <Box sx={{ display: 'flex', justifyContent: 'center', margin: '20px 0', marginBottom: '5%' }}>
+        <Divider sx={{ width: '100px', borderWidth: '3px', backgroundColor: '#8b0000', borderRadius: '4px' }} />
+      </Box>
         </div>
       </Container >
   );
-};
-
+}
 export default Body;
