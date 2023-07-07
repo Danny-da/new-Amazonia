@@ -3,7 +3,7 @@ import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import Header from './components/header';
 import Menu from './components/menu';
 import Home from './components/home';
-import Footer from './components/footer';
+import Footer from './components/DenseAppBar';
 import VistaEspecies from './components/VistaEspecies';
 import BodyPi from './components/BodyPi';
 
